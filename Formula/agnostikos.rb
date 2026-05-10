@@ -5,20 +5,20 @@
 class Agnostikos < Formula
   desc "Meta-wrapper package manager for Pacman, Nix, and Flatpak"
   homepage "https://github.com/ElioNeto/agnostikos"
-  version "0.1.0"
+  version "0.2.0"
   license "MIT"
   depends_on :linux
 
   if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-    url "https://github.com/ElioNeto/agnostikos/releases/download/v0.1.0/agnostikos_0.1.0_linux_amd64.tar.gz"
-    sha256 "ca4579055c3b5162ddc3fcb1a60e32a51a3ac36eab334de586b48dbd522cad0d"
+    url "https://github.com/ElioNeto/agnostikos/releases/download/v0.2.0/agnostikos_0.2.0_linux_amd64.tar.gz"
+    sha256 "b8f170681246e76f355f55c80a0ea45751a3cf089ef98453136dac5e10ac458c"
     define_method(:install) do
       bin.install "agnostic"
     end
   end
   if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/ElioNeto/agnostikos/releases/download/v0.1.0/agnostikos_0.1.0_linux_arm64.tar.gz"
-    sha256 "101a81e79904c33d9046fe724fc1cb1b2aaf4a893c0433cacf52b8faf344c0a3"
+    url "https://github.com/ElioNeto/agnostikos/releases/download/v0.2.0/agnostikos_0.2.0_linux_arm64.tar.gz"
+    sha256 "f85fb7344d3b8f7a16036e367823be9cff2b59a8fa5ed7e36c684165fac9bb1e"
     define_method(:install) do
       bin.install "agnostic"
     end
